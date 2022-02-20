@@ -1,1 +1,1 @@
-# 7th Brain(s) Contest \n by FUJIFILM AI Academy Medical Image Registration
+# 7th Brain(s) Contest - Medical Image Registration
