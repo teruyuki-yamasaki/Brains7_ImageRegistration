@@ -6,7 +6,7 @@ from December 1, 2021 to January 17, 2022.
 This competition is composed of three problems, Q1, Q2 and Q3, each regarding image registration. 
 
 
-My solutions are presented here. 
+My solutions are presented [here](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/docs/brains7.pdf). 
 
 My implementations are available as follows: 
 - Q1: [Q1main.py](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/code/Q1/mainQ1.py)
