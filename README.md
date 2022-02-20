@@ -1,6 +1,6 @@
 # 7th Brain(s) Contest - Medical Image Registration
 
-This repository is about [7th Brain(s) Contest](https://athletix.run/challenges/EoguFmlFr), 
+This repository is about [7th Brain(s) Contest](https://fujifilmdatasciencechallnge.mystrikingly.com/), 
 a data science compation that was held by FUJIFILM AI Academy Brain(s) 
 from December 1, 2021 to January 17, 2022. 
 This competition is composed of three problems, Q1, Q2 and Q3, each regarding image registration. 
