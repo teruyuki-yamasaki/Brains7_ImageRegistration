@@ -83,7 +83,7 @@ taregt画像上におけるキーポイントの対応点を推定し、その�
 
 詳細な説明はPDFの方に譲りますが、概要は以下の通りとなります。
 
-求めたい3次元空間のアフィン変換は、アフィン変換行列のパラメータ12個で表されます:
+求めたい3次元空間のアフィン変換は、アフィン変換行列のパラメータ12個<img src="https://latex.codecogs.com/svg.image?\textbf{p}&space;=&space;(a_{11},&space;\cdots,&space;b_3)^T" title="\textbf{p} = (a_{11}, \cdots, b_3)^T" />で表されます:
 
 <img src="https://latex.codecogs.com/svg.image?\begin{pmatrix}a_{11}&space;&&space;a_{12}&space;&&space;a_{13}&space;&&space;b_1&space;\\a_{21}&space;&&space;a_{22}&space;&&space;a_{23}&space;&&space;b_2&space;\\a_{31}&space;&&space;a_{32}&space;&&space;a_{33}&space;&&space;b_3&space;\\&space;&space;&space;&space;&space;0&space;&&space;&space;&space;&space;&space;&space;0&space;&&space;&space;&space;&space;&space;&space;0&space;&&space;&space;&space;1&space;\\\end{pmatrix}" title="\begin{pmatrix}a_{11} & a_{12} & a_{13} & b_1 \\a_{21} & a_{22} & a_{23} & b_2 \\a_{31} & a_{32} & a_{33} & b_3 \\ 0 & 0 & 0 & 1 \\\end{pmatrix}" />
 
