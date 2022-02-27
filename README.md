@@ -55,8 +55,8 @@ NCC (normalized cross correlation;正規化相互相関)という画像パッチ
 ここから変形モデルとして非線形を組み込む方法を考えました。
 
 非線形変形でよくきくThin-plate splineやB-splineでレジストレーションしたらどうなるのか気になり、
-調べていると[ITKElastix](https://github.com/InsightSoftwareConsortium/ITKElastix)という
-画像レジストレーションの有名なPythonのライブラリーがあり、
+調べていると、問題文でも紹介のあったITKの[ITKElastix](https://github.com/InsightSoftwareConsortium/ITKElastix)という
+画像レジストレーション用の有名なソフトウェアElastixのPython用インターフェイスがあることを知りました。
 実装方法が分からなかったので[こちらの記事](https://qiita.com/39MIFU/items/06aa11512937cae8f0a7)の内容をほとんどそのまま頼りに
 本問題用に改変する形で動かしてみました。すると、うまく動き（動いてしまい）、0.856というスコアになりました。
 ルール上はOKということになっていましたが、流石にこれではまずいと思い、
