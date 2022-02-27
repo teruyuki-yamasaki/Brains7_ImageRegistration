@@ -81,6 +81,9 @@ taregt画像上におけるキーポイントの対応点を推定し、その�
 非線形最小二乗法のソルバー([scipy.optimize.least_squares](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html))
 を使って最適化するというものでした。
 
+求めたい3次元空間のアフィン変換は、アフィン変換行列のパラメータ12個で決まる:
+<img src="https://latex.codecogs.com/svg.image?\begin{pmatirx}a_{11}&space;&&space;a_{12}&space;&&space;a_{13}&space;&&space;b_1&space;\\a_{21}&space;&&space;a_{22}&space;&&space;a_{23}&space;&&space;b_2&space;\\a_{31}&space;&&space;a_{32}&space;&&space;a_{33}&space;&&space;b_3&space;\\&space;&space;&space;&space;&space;0&space;&&space;&space;&space;&space;&space;&space;0&space;&&space;&space;&space;&space;&space;&space;0&space;&&space;&space;&space;1&space;\\\end{pmatirx}" title="\begin{pmatirx}a_{11} & a_{12} & a_{13} & b_1 \\a_{21} & a_{22} & a_{23} & b_2 \\a_{31} & a_{32} & a_{33} & b_3 \\ 0 & 0 & 0 & 1 \\\end{pmatirx}" />
+
 # 7th Brain(s) Contest - Medical Image Registration
 
 This repository is about [7th Brain(s) Contest](https://fujifilmdatasciencechallnge.mystrikingly.com/), 
