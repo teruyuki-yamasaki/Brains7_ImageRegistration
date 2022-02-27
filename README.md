@@ -5,8 +5,7 @@
 [第7回Brain(s)コンテスト](https://fujifilmdatasciencechallnge.mystrikingly.com/)に参加したので、
 その振り返りをここにまとめたいと思います。
 
-**詳細な説明は[こちらのPDF](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/docs/brains7.pdf)にまとめました。
-このマークダウンの方では、概要を振り返りたいと思います。**
+**マークダウンで詳しく書くのが難しかったため、ここでは概要を振り返るにとどめ、詳細な説明は[こちらのPDF](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/docs/brains7.pdf)にまとめました。**
 
 Brain(s)コンテストは、FUJIFILM AI Academy Brain(s)さん主催のデータサイエンスコンペであり、
 画像やマテリアルズインフォマティクスなどのAI技術に関する問題が出題されてきました。
