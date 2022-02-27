@@ -4,6 +4,7 @@
 2021年12月1日から2022年1月17日に行われた、
 [第7回Brain(s)コンテスト](https://fujifilmdatasciencechallnge.mystrikingly.com/)に参加したので、
 その振り返りをここにまとめたいと思います。
+詳細な説明は[PDF](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/docs/brains7.pdf)にまとめました。
 
 Brain(s)コンテストは、FUJIFILM AI Academy Brain(s)さん主催のデータサイエンスコンペであり、
 画像やマテリアルズインフォマティクスなどのAI技術に関する問題が出題されてきました。
@@ -30,6 +31,7 @@ Q1は、与えられた2次元の点群に対して指示されたアフィン�
 後のQ2やQ3で使用するアフィン変換行列の操作に慣れるための目的で用意された問題だったようです。
 
 ## Q2: 2次元医用画像レジストレーション
+### 問題内容
 Q2は、2次元医用画像レジストレーションであり、与えられた２枚のペアの脳画像に対して、その画像間の変形を推定する問題でした。
 画像データはIXI DatasetのT1画像から得られた脳のMRI断層画像であり、
 元の画像がsource画像(256x256 pixels)、そしてそれに謎の変形を加えて得られる画像がtarget画像(256x256 pixels)として与えられ、
@@ -39,6 +41,7 @@ source画像には、10個程度のキーポイントのピクセル座標値が
 それらのtaregt画像上における対応点のピクセル座標値を推定し、
 その推定値とground truthとのユークリッド距離の平均値がスコアとして計算されるというものでした。
 
+### アプローチ
 最初は、テンプレートマッチングでどこまで精度を上げられるか試していました。
 NCC (normalized cross correlation;正規化相互相関)という画像パッチ間の類似度の指標を用いて、
 各キーポイントの周りのパッチとtarget画像の各ピクセル周りパッチの類似度を逐一計算し、
@@ -65,12 +68,13 @@ NCC (normalized cross correlation;正規化相互相関)という画像パッチ
 Q2はこのまま提出することになりました。個人的には、流石にこれでは終われないと思っていたので、本当にQ3で挽回できたのが救いでした。
 
 ## Q3: 3次元医用画像レジストレーション
+### 問題内容
 Q3は、3次元のMRI画像ボリュームデータのペアの間でのレジストレーションが課題でした。
 Q2と同じく、IXI Datasetのデータが用いられ、source画像がT2、taregt画像がPD強調画像で与えれており、異なるモダリティの3次元画像のレジストレーションになっていました。
 target画像には謎の変形が加わっていて、source画像にはキーポイントの3次元座標値が与えられており、
 taregt画像上におけるキーポイントの対応点を推定し、その推定点とground truthのユークリッド距離の平均値でスコアが評価されました。
 
-
+### アプローチ
 正直最初は全然分からなかったのですが、
 [scipy.ndimage.affine_transform](https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.affine_transform.html)
 のようなライブラリーを使えば、3次元ボリュームデータのアフィン変換が容易にできることを知り、
@@ -81,7 +85,7 @@ taregt画像上におけるキーポイントの対応点を推定し、その�
 非線形最小二乗法のソルバー([scipy.optimize.least_squares](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html))
 を使って最適化するというものでした。
 
-詳細な説明はPDFの方に譲りますが、概要は以下の通りとなります。
+詳細な説明は[PDF](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/docs/brains7.pdf)の方に譲りますが、概要は以下の通りとなります。
 
 求めたい3次元空間のアフィン変換は、アフィン変換行列のパラメータ12個<img src="https://latex.codecogs.com/svg.image?\textbf{p}&space;=&space;(a_{11},&space;\cdots,&space;b_3)^T" title="\textbf{p} = (a_{11}, \cdots, b_3)^T" />で表されます:
 
@@ -100,8 +104,16 @@ target画像<img src="https://latex.codecogs.com/svg.image?I_{target}" title="I_
 非線形最小二乗法のソルバー([scipy.optimize.least_squares](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html))
 に渡せば、うまく動けば最適なパラメータ<img src="https://latex.codecogs.com/svg.image?\textbf{p}" title="\textbf{p}" />を見つけてきてくれます。
 
+ただし、今回はsourceとtargetで異なるタイプの強調画像(それぞれT2とPD)が使われているため、
+これだけでは少し動いたものの、ほとんど動いてくれませんでした。
 
+そこで、苦肉の策として、source(T2)とtarget(PD)両画像データの各z平面の輝度勾配を計算し、
+輝度勾配のL2ノルム<img src="https://latex.codecogs.com/svg.image?\sqrt{I_x^2&space;&plus;&space;I_y^2}" title="\sqrt{I_x^2 + I_y^2}" />の2次元データを
+z方向に再度積み重ねて得られるボリュームデータを作成し、そうして得られたデータを上の最適化計算に投げてみることにしました。
 
+すると最終的にうまく動いてくれて、0.536というスコアを得ることができました。締め切りの二日前にようやく動いてくれて、本当に焦りましたがよかったです。
+
+以上が私の解放の概要になります。詳細は
 
 # 7th Brain(s) Contest - Medical Image Registration
 
