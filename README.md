@@ -125,6 +125,7 @@ target画像<img src="https://latex.codecogs.com/svg.image?I_{target}" title="I_
 そこで、苦肉の策として、source(T2)とtarget(PD)両画像データの各z平面の輝度勾配を計算し、
 輝度勾配のL2ノルム<img src="https://latex.codecogs.com/svg.image?\sqrt{I_x^2&space;&plus;&space;I_y^2}" title="\sqrt{I_x^2 + I_y^2}" />の2次元データを
 z方向に再度積み重ねて得られるボリュームデータを作成し、そうして得られたデータを上の最適化計算に投げてみることにしました。
+また、そのままのサイズ(256x256x130 voxels程度)では計算が重すぎるのと、データが細かすぎるので、ダウンサプリングしたものを用いて最適化を高速化および安定化させました。
 
 すると最終的にうまく動いてくれて、0.536というスコアを得ることができました。締め切りの二日前にようやく動いてくれて、本当に焦りましたがよかったです。
 <img src="https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/images/IXI002_sample_kpts.png"> 
