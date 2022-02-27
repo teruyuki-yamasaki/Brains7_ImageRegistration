@@ -127,6 +127,7 @@ target画像<img src="https://latex.codecogs.com/svg.image?I_{target}" title="I_
 z方向に再度積み重ねて得られるボリュームデータを作成し、そうして得られたデータを上の最適化計算に投げてみることにしました。
 
 すると最終的にうまく動いてくれて、0.536というスコアを得ることができました。締め切りの二日前にようやく動いてくれて、本当に焦りましたがよかったです。
+<img src="https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/images/IXI002_sample_kpts.png"> 
 
 以上が私の解法の概要になります。まずは画像処理ベースの手法でできるところまでやってみて、
 時間に余裕があればディープベースの手法も試したいと思っていましたが、そこまではさすがに時間が足りませんでした。
