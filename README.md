@@ -7,6 +7,7 @@
 
 マークダウンで詳しく記述するのが難しかったため、ここでは概要を振り返るにとどめ、**詳細な説明は[こちらのPDF](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/docs/brains7.pdf)にまとめました。**
 
+## 概要
 Brain(s)コンテストは、FUJIFILM AI Academy Brain(s)さん主催のデータサイエンスコンペであり、
 画像やマテリアルズインフォマティクスなどのAI技術に関する問題が出題されてきました。
 私が参加した第7回のテーマは、画像レジストレーションであり、
