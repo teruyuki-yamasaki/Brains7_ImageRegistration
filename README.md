@@ -12,12 +12,17 @@ Brain(s)コンテストは、FUJIFILM AI Academy Brain(s)さん主催のデー�
 私が参加した第7回のテーマは、画像レジストレーションであり、
 MRIの脳画像を用いて、画像ペア間での位置合わせを行うことが主な課題でした。
 
-問題はQ1、Q2、Q3の3問からなり、それぞれ、
+問題はQ1、Q2、Q3の3問からなり、それぞれの概要は、
 - Q1: アフィン変換行列に関する問題
 - Q2: 2次元医用画像レジストレーション
 - Q3: 3次元医用画像レジストレーション
 
-であり、Q2とQ3の精度を参加者同士が競い合うというものでした。
+でした。Q2とQ3の精度を参加者同士が競い合うというものでした。
+
+また、それぞれの解法は以下のように実装しました：
+- Q1: [Q1main.py](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/code/Q1/mainQ1.py)
+- Q2: [Q2main_itk.py](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/code/Q2/mainQ2_itk.py)
+- Q3: [Q3main.py](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/code/Q3/mainQ3.py)
 
 結果としては、Q3を１位で表彰していただくことができました。
 また、Q2もスコア自体は4人同率1位のスコアのうち一つを取ることができました。
