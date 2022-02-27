@@ -1,4 +1,15 @@
 # 第7回 Brain(s)コンテスト - 医用画像レジストレーション
+※ The English version is below. eng
+
+2021年12月1日から2022年1月17日に行われた、第7回Brain(s)コンテストに参加したので、
+その振り返りをここにまとめたいと思います。
+
+Brain(s)コンテストは、FUJIFILM AI Academy Brain(s)さん主催のデータサイエンスコンペであり、
+富士フイルムさんの事業領域に関わるAIの
+テーマは医用画像レジストレーションで、MRIの脳画像を用いて、２枚の画像間での位置合わせを行うことが課題でした。
+
+
+
 
 # 7th Brain(s) Contest - Medical Image Registration
 
