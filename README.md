@@ -17,7 +17,7 @@ MRIの脳画像を用いて、画像ペア間での位置合わせを行うこ�
 - Q2: 2次元医用画像レジストレーション
 - Q3: 3次元医用画像レジストレーション
 
-でした。Q2とQ3の精度を参加者同士が競い合うというものでした。
+でした。Q1は正誤問題で、Q2とQ3のそれぞれの精度を参加者同士が競い合うというものでした。
 
 また、それぞれの解法は以下のように実装しました：
 - Q1: [Q1main.py](https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/code/Q1/mainQ1.py)
