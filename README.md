@@ -90,8 +90,17 @@ taregt画像上におけるキーポイントの対応点を推定し、その�
 このアフィン変換を用いて
 source画像<img src="https://latex.codecogs.com/svg.image?I_{source}" title="I_{source}" />を変形させて得られる
 ワープ画像<img src="https://latex.codecogs.com/svg.image?I_{warped}" title="I_{warped}" />と、
-target画像<img src="https://latex.codecogs.com/svg.image?I_{target}" title="I_{target}" />の残差
+target画像<img src="https://latex.codecogs.com/svg.image?I_{target}" title="I_{target}" />の差をとって得られる画像データ
+
 <img src="https://latex.codecogs.com/svg.image?\textbf{r}(\textbf{p})&space;:=&space;I_{warped}(\textbf{p})&space;-&space;I_{target}&space;" title="\textbf{r}(\textbf{p}) := I_{warped}(\textbf{p}) - I_{target} " />
+
+は、パラメータ<img src="https://latex.codecogs.com/svg.image?\textbf{p}" title="\textbf{p}" />の関数であり、
+この関数<img src="https://latex.codecogs.com/svg.image?\textbf{r}(\textbf{p})" title="\textbf{r}(\textbf{p})" />と
+パラメータ<img src="https://latex.codecogs.com/svg.image?\textbf{p}" title="\textbf{p}" />の初期値を
+非線形最小二乗法のソルバー([scipy.optimize.least_squares](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html))
+に渡せば、うまく動けば最適なパラメータ<img src="https://latex.codecogs.com/svg.image?\textbf{p}" title="\textbf{p}" />を見つけてきてくれます。
+
+
 
 
 # 7th Brain(s) Contest - Medical Image Registration
