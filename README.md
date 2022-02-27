@@ -42,7 +42,7 @@ Q1は、与えられた2次元の点群に対して指示されたアフィン�
 ## Q2: 2次元医用画像レジストレーション
 ### 問題内容
 Q2は、2次元医用画像レジストレーションであり、与えられた２枚のペアの脳画像に対して、その画像間の変形を推定する問題でした。
-画像データはIXI DatasetのT1画像から得られた脳のMRI断層画像であり、
+画像データは[IXI Dataset](https://brain-development.org/ixi-dataset/)のT1画像から得られた脳のMRI断層画像であり、
 元の画像がsource画像(256x256 pixels)、そしてそれに謎の変形を加えて得られる画像がtarget画像(256x256 pixels)として与えられ、
 ２枚の画像からその謎の変形を推定するというものでした。
 
@@ -71,6 +71,9 @@ NCC (normalized cross correlation;正規化相互相関)という画像パッチ
 画像レジストレーション用の有名なソフトウェアElastixのPython用インターフェイスがあることを知りました。
 実装方法が分からなかったので[こちらの記事](https://qiita.com/39MIFU/items/06aa11512937cae8f0a7)の内容をほとんどそのまま頼りに
 本問題用に改変する形で動かしてみました。すると、うまく動き（動いてしまい）、0.856というスコアになりました。
+
+<img src="https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/images/Q2_IXI002-Guys-0828_051_itk.png">
+
 ルール上はOKということになっていましたが、流石にこれではまずいと思い、
 これにテンプレートマッチングの結果を組み合わせたり、自分で実装しようと試みましたが、なかなかこれを超えるスコアは難しく、
 とりあえず置いておき、代わりにQ3に取り組むことにしました。最終的に、Q3を一通り解いた後の時間が残されておらず、
@@ -79,10 +82,12 @@ Q2はこのまま提出することになりました。個人的には、流石
 ## Q3: 3次元医用画像レジストレーション
 ### 問題内容
 Q3は、3次元のMRI画像ボリュームデータのペアの間でのレジストレーションが課題でした。
-Q2と同じく、IXI Datasetのデータが用いられていましたが、
+Q2と同じく、[IXI Dataset](https://brain-development.org/ixi-dataset/)のデータが用いられていましたが、
 source画像がT2、taregt画像がPD強調画像で与えれており、異なるモダリティの3次元画像のレジストレーションになっていました。
 target画像には謎の変形が加わっていて、source画像にはキーポイントの3次元座標値が与えられており、
 taregt画像上におけるキーポイントの対応点を推定し、その推定点とground truthのユークリッド距離の平均値でスコアが評価されました。
+
+<img src="https://github.com/teruyuki-yamasaki/Brains7_ImageRegistration/blob/main/images/Q3_3dview.png">
 
 ### アプローチ
 正直最初は全然分からなかったのですが、
