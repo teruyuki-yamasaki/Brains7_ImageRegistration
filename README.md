@@ -145,14 +145,14 @@ Q2は試行錯誤した後に、納得しづらい解になってしまったの
 大会を通じて医用画像技術についての知識やスキルを深めることができ、同様の分野を志す学生の方々や現場で活躍される社員さんの方々とお話しできる機会をいただきました。
 そして、景品としてカメラも贈呈いただき本当にありがとうございました。大切に使用させていただきます。
 また、本大会を通じて、スコアを一緒に競い合ってくださった学生の皆様もありがとうございました。
-他の方がスコアを伸ばしているのをみると焦る反面、自分が気づいていないことや試すべきことががまだまだあるはずだというマインドになって、
-刺激を受けてより学んだり工夫したりできて、一層学びとして深めることができ、そのおかげでQ3では自分で満足できる結果に辿り着けたと思います。
+他の方がスコアを伸ばしているのをみると、焦る反面、自分が気づいていないことや試すべきことががまだまだあるはずだというマインドになって、
+刺激を受けてより学んだり工夫したりできて、一層学びとして深めることができました。そのおかげでQ3では自分で満足できる結果に辿り着けたと思います。
 
 
 # 7th Brain(s) Contest - Medical Image Registration
 
 This repository is about [7th Brain(s) Contest](https://fujifilmdatasciencechallnge.mystrikingly.com/), 
-a data science compation that was held by FUJIFILM AI Academy Brain(s) 
+a data science competition that was held by FUJIFILM AI Academy Brain(s) 
 from December 1, 2021 to January 17, 2022. 
 This competition is composed of three problems, Q1, Q2 and Q3, each regarding image registration. 
 
